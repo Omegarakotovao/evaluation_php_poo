@@ -25,6 +25,8 @@ class ConsoleRepository
      */
     public function findAllConsoles(): array 
     {
-        return [];
+        $sql = "SELECT id_console, name, manufacturer FROM console";
+        $requete = $this->connect->prepare($sql);
+        // Préparer la requête SQL avec la connexion PDO
     }
 }
